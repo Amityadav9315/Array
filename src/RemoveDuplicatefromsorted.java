@@ -1,27 +1,45 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class RemoveDuplicatefromsorted {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int max = 0;
-        int[] arr = new int[n];
-        int[] arr2 = new int[n];
 
+    public static int removeDuplicates(int[] arr) {
+        int n = arr.length;
 
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+        // If the array is empty or has only one element, return the array as is.
+        if (n == 0 || n == 1) {
+            return n;
         }
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                if (arr[i] != arr[j]) {
-                    //  int[] arr2;
-                    arr2[i] = arr[i];
+
+        // Variable to track the index of the next unique element.
+        int uniqueIndex = 1;
+
+        // Loop through the array to check for duplicates.
+        for (int i = 1; i < n; i++) {
+            boolean isDuplicate = false;
+
+            // Check if the current element is a duplicate of any previous elements.
+            for (int j = 0; j < uniqueIndex; j++) {
+                if (arr[i] == arr[j]) {
+                    isDuplicate = true;
+                    break;
                 }
             }
+
+            // If no duplicates are found, move the unique element to the uniqueIndex.
+            if (!isDuplicate) {
+                arr[uniqueIndex] = arr[i];
+                uniqueIndex++;
+            }
         }
-        for (int x:arr2) {
-            System.out.println(x);
-        }
+
+        return uniqueIndex;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 2, 4, 1, 5};
+        int newLength = removeDuplicates(arr);
+
+        // Print the array without duplicates.
+        System.out.println("Array without duplicates: " + Arrays.toString(Arrays.copyOf(arr, newLength)));
     }
 }
