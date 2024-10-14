@@ -28,7 +28,7 @@ public class FindAllrepeatingElement {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("E th number");
+        System.out.println("entre th number");
         int n = sc.nextInt();
         int[] arr = new int[n];
 
