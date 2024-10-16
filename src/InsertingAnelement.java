@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class InsertingAnelement {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println();
+        System.out.println("Enter the numberg");
         int k=100;
         int[] arr=new int[10];
         arr[0]=10;
