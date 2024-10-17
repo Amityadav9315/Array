@@ -5,6 +5,7 @@ public class Average {
 
 
         Scanner sc = new Scanner(System.in);
+        System.out.println();
         int n = sc.nextInt();
         int sum = 0;
 
