@@ -5,7 +5,7 @@ public class Average {
 
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("21");
+        System.out.println("Enter the number");
         int n = sc.nextInt();
         int sum = 0;
 
