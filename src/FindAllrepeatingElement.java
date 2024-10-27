@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class FindAllrepeatingElement {
 
     static void Repeat(int arr[], int n) {
-        boolean[] isPrintedarr = new boolean[n];  // To track printed elements
+        boolean[] isPrintedarr = new boolean[n];
+        System.out.println();// To track printed elements
 
         for (int i = 0; i < n - 1; i++) {
             int c = 0;  // Reset counter for each element
