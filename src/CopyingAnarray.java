@@ -5,6 +5,7 @@ public class CopyingAnarray {
 
 
         Scanner sc = new Scanner(System.in);
+        System.out.println();
         int n = sc.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
