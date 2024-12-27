@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class AdditionofTwoMatrix {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //adition of two marrix
         int n = sc.nextInt();
         int[][] a = new int[n][n];
         int[][] b = new int[n][n];
