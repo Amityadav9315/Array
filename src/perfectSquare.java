@@ -7,11 +7,14 @@ public class perfectSquare {
         int num=sc.nextInt();
 
             int count=0;
-            for(int i=1; i<num/2; i++){
-                if(i*i==num){
-                    count++;
+
+                for (int i = 1; i <= num; i++) {
+                    if (i * i == num) {
+                        count++;
+                        break;
+                    }
                 }
-            }
+
             if(count>=1){
                 System.out.println("True");
             }
