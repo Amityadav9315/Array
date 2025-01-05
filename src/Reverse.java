@@ -9,7 +9,7 @@ public class Reverse {
         int n = a.length;
         for (int i = n - 1; i >= 0; i--) {
             System.out.print(a[i] + " ");
-            System.out.println("");
+
         }
     }
 }
